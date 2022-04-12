@@ -19,7 +19,6 @@ namespace serial_checker
     {
         public MainForm()
         {
-            AllocConsole();
             InitializeComponent();
 
 
@@ -119,10 +118,6 @@ namespace serial_checker
 
             return "";
         }
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AllocConsole();
 
         private void copyButton_Click(object sender, EventArgs e)
         {
